@@ -73,7 +73,7 @@ const WebcamComponent = () => {
     return (
       <div>
         { !showPicture && 
-          <div className = 'center-align'>
+          <div id = 'webcam' className = 'center-align'>
             <Webcam
               audio={false}
               height={dimensions.height}
@@ -95,9 +95,9 @@ const WebcamComponent = () => {
         {/* <Modal /> */}
         <div class = "row">
           <div className = 'center-align'>
-            <button className="btn waves-effect waves-light" onClick={capture} disabled={showPicture}>Capture Image</button>
-            <button className="btn waves-effect waves-light" onClick = {() => setShowPicture(false)}>Retake Image</button>
-            {showPicture && <button className="btn waves-effect waves-light" onClick = {onSubmit}>Submit Image</button>}
+            <button id = 'capture-image' className="btn waves-effect waves-light" onClick={capture} disabled={showPicture}>Capture Image</button>
+            <button id = 'retake-image' className="btn waves-effect waves-light" onClick = {() => setShowPicture(false)}>Retake Image</button>
+            {showPicture && <button id = 'submit-image' className="btn waves-effect waves-light" onClick = {onSubmit}>Submit Image</button>}
           </div>
         </div>   
       </div>

@@ -16,7 +16,7 @@ const Form = () => {
         setFormData({...formData, [event.target.id]: event.target.value});
     }
     return(
-        <div className="row">
+        <div id = 'form' className="row">
             <form className="col s12">
                 <div className="input-field col s10">
                     <h5 className = 'center-align' htmlFor="name">Mortgage Application Form</h5>

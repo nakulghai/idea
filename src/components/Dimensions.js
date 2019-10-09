@@ -15,7 +15,7 @@ const Dimensions = () => {
         dispatch({type: 'DIMENSION', payload: newDimensions});
     }
     return(
-        <div>
+        <div id='dimensions'>
             <div className="row">
                 <div className="input-field col s6">
                     <input id="width" onChange={handleChange} type="text" value = {dimensions.width} className="validate"/>
