@@ -40,16 +40,13 @@ describe('IDEA Health checks', function() {
     it('test to check if form shows on click of submit button', () => {
         cy.server();
 
-        cy.get('#capture-image')
-            .click();
-
-        cy.get('#submit-image')
-            .click(); 
-
         cy.route({
             method: 'PUT',
             url: '/ocr/detecttext',
-            status: 204
+            status: 200,
+            response: {
+                status: '200'
+            }
         });
 
         cy.route({
@@ -63,6 +60,12 @@ describe('IDEA Health checks', function() {
                 "name": "Conor"
             }
         });
+
+        cy.get('#capture-image')
+            .click();
+
+        cy.get('#submit-image')
+            .click(); 
 
         cy.get('#form')
             .should('be.visible');
