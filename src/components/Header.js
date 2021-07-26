@@ -4,7 +4,7 @@ function header (props) {
     return (
         <nav>
             <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">Information Data Extraction & Analysis</a>
+            <a href="#" class="brand-logo center">Digital Signature</a>
             </div>
         </nav>
     );
